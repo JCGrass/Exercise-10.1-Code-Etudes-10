@@ -1,0 +1,27 @@
+<!DOCTYPE>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+</script>
+</head>
+
+  <body>
+
+function delay() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('https://google.com/');
+    }, 2000);
+  });
+}
+
+async function asyncCall() {
+  console.log('fetching URLs...');
+  var result = await delay(1000);
+  console.log(result);
+}
+
+asyncCall();
+
+</body>
+</html>
