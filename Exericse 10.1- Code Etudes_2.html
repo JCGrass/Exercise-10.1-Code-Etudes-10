@@ -1,0 +1,43 @@
+<!DOCTYPE>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+</script>
+</head>
+
+  <body>
+
+function resolveAfter2Seconds() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('https://google.com/');
+    }, 2000);
+  });
+}
+
+function resolveAfter2Seconds() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('https://patrickmcneill.com/');
+    }, 2000);
+  });
+}
+
+function resolveAfter2Seconds() {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve('https://patrickmcneill.com/itp/urls.txt');
+    }, 2000);
+  });
+}
+
+async function asyncCall() {
+  console.log('fetching URLs...');
+  var result = await resolveAfter2Seconds();
+  console.log(result);
+}
+
+asyncCall();
+
+</body>
+</html>
